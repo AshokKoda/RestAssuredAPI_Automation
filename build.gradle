@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.5'
+    implementation 'org.testng:testng:7.5'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.0.1'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.0-alpha5'
+
+
+}
+
+test {
+    useTestNG()
+}
