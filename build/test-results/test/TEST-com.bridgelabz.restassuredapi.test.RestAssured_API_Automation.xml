@@ -1,10 +1,438 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-09T09:48:02" hostname="DESKTOP-FTC32SQ" time="3.856">
+<testsuite name="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-06-10T04:58:06" hostname="DESKTOP-FTC32SQ" time="7.652">
   <properties/>
-  <testcase name="getListOfCurrentUsersPlaylist" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="3.856"/>
-  <system-out><![CDATA[{
+  <testcase name="getCurrentUserProfile" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="4.614"/>
+  <testcase name="getUserProfile" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="0.378"/>
+  <testcase name="newCreatePlaylist" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="0.685"/>
+  <testcase name="playlistGetWithPlaylistId" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="0.485"/>
+  <testcase name="getUserPlaylist" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="1.024"/>
+  <testcase name="updatePlaylist" classname="com.bridgelabz.restassuredapi.test.RestAssured_API_Automation" time="0.452"/>
+  <system-out><![CDATA[--------------------Get Current UserProfile--------------------
+{
+    "country": "IN",
+    "display_name": "Koda@1996",
+    "email": "a.koda59@gmail.com",
+    "explicit_content": {
+        "filter_enabled": false,
+        "filter_locked": false
+    },
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+    "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+    "images": [
+        
+    ],
+    "product": "open",
+    "type": "user",
+    "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+}
+UserID: 313ezwhpfwgm7kspa45ceyqhgtu4
+--------------------Get UserProfile with userId--------------------
+{
+    "display_name": "Koda@1996",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+    "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+    "images": [
+        
+    ],
+    "type": "user",
+    "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+}
+--------------------Create new playlist--------------------
+UserID: 313ezwhpfwgm7kspa45ceyqhgtu4
+{
+    "collaborative": false,
+    "description": "Telugu playlist description",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/1Yh4R3U45d34G16C2o3H6p"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p",
+    "id": "1Yh4R3U45d34G16C2o3H6p",
+    "images": [
+        
+    ],
+    "name": "Harish Playlist",
+    "owner": {
+        "display_name": "Koda@1996",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+        },
+        "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+        "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+        "type": "user",
+        "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MSxjMzc5YmE4N2RlZDg0NGQ1MjBkNDZmMzQzNGEzOTczYTUzM2IwYTlj",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p/tracks",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:1Yh4R3U45d34G16C2o3H6p"
+}
+Playlist ID: 1Yh4R3U45d34G16C2o3H6p
+--------------------Get Playlist--------------------
+{
+    "collaborative": false,
+    "description": "Telugu playlist description",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/1Yh4R3U45d34G16C2o3H6p"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p",
+    "id": "1Yh4R3U45d34G16C2o3H6p",
+    "images": [
+        
+    ],
+    "name": "Harish Playlist",
+    "owner": {
+        "display_name": "Koda@1996",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+        },
+        "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+        "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+        "type": "user",
+        "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "Miw4NThlNjQ1MjE2OTI2MzQxY2NlNTU1ZjRjNzQ3MDQ3YzNiMmU0ZjBl",
+    "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p/tracks?offset=0&limit=100",
+        "items": [
+            
+        ],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:1Yh4R3U45d34G16C2o3H6p"
+}
+--------------------Get User Playlist--------------------
+{
     "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4/playlists?offset=0&limit=20",
     "items": [
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/1Yh4R3U45d34G16C2o3H6p"
+            },
+            "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p",
+            "id": "1Yh4R3U45d34G16C2o3H6p",
+            "images": [
+                
+            ],
+            "name": "Harish Playlist",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "Miw4NThlNjQ1MjE2OTI2MzQxY2NlNTU1ZjRjNzQ3MDQ3YzNiMmU0ZjBl",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:1Yh4R3U45d34G16C2o3H6p"
+        },
+        {
+            "collaborative": false,
+            "description": "Updated playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/209i7U7zf66jjO595mkqhD"
+            },
+            "href": "https://api.spotify.com/v1/playlists/209i7U7zf66jjO595mkqhD",
+            "id": "209i7U7zf66jjO595mkqhD",
+            "images": [
+                
+            ],
+            "name": "Updated Playlist Name",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "NSw4OWEwNWUxN2ZlNjIxMDYwNGE5ZjRkMmMxYWU1OTAxM2NhNTE4OWI4",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/209i7U7zf66jjO595mkqhD/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:209i7U7zf66jjO595mkqhD"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/669B1sHR0WbQVbPwob8Urz"
+            },
+            "href": "https://api.spotify.com/v1/playlists/669B1sHR0WbQVbPwob8Urz",
+            "id": "669B1sHR0WbQVbPwob8Urz",
+            "images": [
+                
+            ],
+            "name": "Harish Playlist",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "Miw1YWRiOWJmY2Q5ODY4ODIyMjZmZWIzY2ZiZWIwZTUyNjVkOTBkMGQ0",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/669B1sHR0WbQVbPwob8Urz/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:669B1sHR0WbQVbPwob8Urz"
+        },
+        {
+            "collaborative": false,
+            "description": "New playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/3mXu5YFNLjcEDskzuwPrmE"
+            },
+            "href": "https://api.spotify.com/v1/playlists/3mXu5YFNLjcEDskzuwPrmE",
+            "id": "3mXu5YFNLjcEDskzuwPrmE",
+            "images": [
+                
+            ],
+            "name": "Harish Playlist",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "Miw3M2QzZTIxNGRhNmFkMDkwNmZlZGJlNTQxY2QyZThjYjk4MTYyMDAy",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/3mXu5YFNLjcEDskzuwPrmE/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:3mXu5YFNLjcEDskzuwPrmE"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/3WKeE9v5GxrZkYL0rMXNla"
+            },
+            "href": "https://api.spotify.com/v1/playlists/3WKeE9v5GxrZkYL0rMXNla",
+            "id": "3WKeE9v5GxrZkYL0rMXNla",
+            "images": [
+                
+            ],
+            "name": "Telugu New Collection",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MiwyOTY4NDJiMDU5OWE5OWY4ODFiZTc2YjMxYTY3YWQwYjU2NGY0Yjc3",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/3WKeE9v5GxrZkYL0rMXNla/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:3WKeE9v5GxrZkYL0rMXNla"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/5mk0Nqhwv4so1RqpVxrtiW"
+            },
+            "href": "https://api.spotify.com/v1/playlists/5mk0Nqhwv4so1RqpVxrtiW",
+            "id": "5mk0Nqhwv4so1RqpVxrtiW",
+            "images": [
+                
+            ],
+            "name": "Telugu New Collection",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MiwyNWNiMzM5ZWQzMDFlNjdmZDk5ZmVlNDI4ZDU4NGY0YWRiZjZjNjA1",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/5mk0Nqhwv4so1RqpVxrtiW/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:5mk0Nqhwv4so1RqpVxrtiW"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/7D6PmgExJRIaNRdbsqH1Wm"
+            },
+            "href": "https://api.spotify.com/v1/playlists/7D6PmgExJRIaNRdbsqH1Wm",
+            "id": "7D6PmgExJRIaNRdbsqH1Wm",
+            "images": [
+                
+            ],
+            "name": "Telugu New Collection",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "Miw1NjNiZWQ4NzM2Y2RiMmY1ODgwNmYwOGI0OTIxMjc4NWM5YjgzZWM1",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/7D6PmgExJRIaNRdbsqH1Wm/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:7D6PmgExJRIaNRdbsqH1Wm"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/42487QKLXnurp8HpvMuAEK"
+            },
+            "href": "https://api.spotify.com/v1/playlists/42487QKLXnurp8HpvMuAEK",
+            "id": "42487QKLXnurp8HpvMuAEK",
+            "images": [
+                
+            ],
+            "name": "Telugu New Collection",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "Miw4MjBhODM1N2JhYWUxOWM4YWFlMThlMzFlYjliMGJkYWI0MjJkMmI5",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/42487QKLXnurp8HpvMuAEK/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:42487QKLXnurp8HpvMuAEK"
+        },
+        {
+            "collaborative": false,
+            "description": "Telugu playlist description",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/1JUv0hMpJoln0SGCIM5xOu"
+            },
+            "href": "https://api.spotify.com/v1/playlists/1JUv0hMpJoln0SGCIM5xOu",
+            "id": "1JUv0hMpJoln0SGCIM5xOu",
+            "images": [
+                
+            ],
+            "name": "Telugu New Collection",
+            "owner": {
+                "display_name": "Koda@1996",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
+                },
+                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
+                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
+                "type": "user",
+                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MiwxZmI1OTczNjM1NmMzYTNlOTdlMDcyNGMyYmQ1ZDNmMzJmMzBjNGRl",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/1JUv0hMpJoln0SGCIM5xOu/tracks",
+                "total": 0
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:1JUv0hMpJoln0SGCIM5xOu"
+        },
         {
             "collaborative": false,
             "description": "Telugu playlist description",
@@ -370,305 +798,22 @@
             },
             "type": "playlist",
             "uri": "spotify:playlist:17oFX5yGTlV0oEHX9JJq6q"
-        },
-        {
-            "collaborative": false,
-            "description": "New songs collections",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/5lNzld5QqRRawRpcMiyU3h"
-            },
-            "href": "https://api.spotify.com/v1/playlists/5lNzld5QqRRawRpcMiyU3h",
-            "id": "5lNzld5QqRRawRpcMiyU3h",
-            "images": [
-                
-            ],
-            "name": "Telugu songs",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MixlY2M2YmMwNDQxYmZmMmE0OTNkNmU2OTRkNTc2MWQzNTJmZDljY2Jh",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/5lNzld5QqRRawRpcMiyU3h/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:5lNzld5QqRRawRpcMiyU3h"
-        },
-        {
-            "collaborative": false,
-            "description": "New songs collections",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/7GqFJp4I1oCp1o7holbDPG"
-            },
-            "href": "https://api.spotify.com/v1/playlists/7GqFJp4I1oCp1o7holbDPG",
-            "id": "7GqFJp4I1oCp1o7holbDPG",
-            "images": [
-                
-            ],
-            "name": "Telugu songs",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MiwyNDdhNWNhZmExZmUxZGU2OTY2NDc1OTNlYmUzOGVhNTBkNDhjNGNm",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/7GqFJp4I1oCp1o7holbDPG/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:7GqFJp4I1oCp1o7holbDPG"
-        },
-        {
-            "collaborative": false,
-            "description": "New telugu songs",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/00dp463Xm5mBUzWQHDnNjV"
-            },
-            "href": "https://api.spotify.com/v1/playlists/00dp463Xm5mBUzWQHDnNjV",
-            "id": "00dp463Xm5mBUzWQHDnNjV",
-            "images": [
-                {
-                    "height": 640,
-                    "url": "https://i.scdn.co/image/ab67616d0000b273b6b3b7f26f0bc0e0197163a0",
-                    "width": 640
-                }
-            ],
-            "name": "Ashok1996",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MTAsMzVhOWI0MTU2ZWIyNTFlZjA3N2I3ZTMzYmE3NDE4MTZjOTI4YWExOQ==",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/00dp463Xm5mBUzWQHDnNjV/tracks",
-                "total": 4
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:00dp463Xm5mBUzWQHDnNjV"
-        },
-        {
-            "collaborative": false,
-            "description": "New songs collections",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/1eUHZFqDXJyPcy8eXjrzI9"
-            },
-            "href": "https://api.spotify.com/v1/playlists/1eUHZFqDXJyPcy8eXjrzI9",
-            "id": "1eUHZFqDXJyPcy8eXjrzI9",
-            "images": [
-                
-            ],
-            "name": "Telugu songs",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MiwyNTAzOTliNzQyODlkMGY5MGExNDRiODRhMGRjMmVkODU0OWViMTNi",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/1eUHZFqDXJyPcy8eXjrzI9/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:1eUHZFqDXJyPcy8eXjrzI9"
-        },
-        {
-            "collaborative": false,
-            "description": "New playlist description",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/6wyKS7XaEXNe47MpYskWuX"
-            },
-            "href": "https://api.spotify.com/v1/playlists/6wyKS7XaEXNe47MpYskWuX",
-            "id": "6wyKS7XaEXNe47MpYskWuX",
-            "images": [
-                
-            ],
-            "name": "New Playlist2022",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MiwwYjY1YmU3MzFhNDc4ZWI3YWRiOGZlMmVlNjljMWYyN2I1NWE1Y2Ni",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/6wyKS7XaEXNe47MpYskWuX/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:6wyKS7XaEXNe47MpYskWuX"
-        },
-        {
-            "collaborative": false,
-            "description": "New playlist description",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/1wGCyPnVAQMHEywBxJBWaL"
-            },
-            "href": "https://api.spotify.com/v1/playlists/1wGCyPnVAQMHEywBxJBWaL",
-            "id": "1wGCyPnVAQMHEywBxJBWaL",
-            "images": [
-                
-            ],
-            "name": "New Playlist2022",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MiwzMzNlNjZlOTE3NjFhOGY4MTI4M2I4ODNhYmE5NWNjMzFhN2E4ZmM3",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/1wGCyPnVAQMHEywBxJBWaL/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:1wGCyPnVAQMHEywBxJBWaL"
-        },
-        {
-            "collaborative": false,
-            "description": "New playlist description",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/6Wbvbzln8S0MTEBNPy9hmF"
-            },
-            "href": "https://api.spotify.com/v1/playlists/6Wbvbzln8S0MTEBNPy9hmF",
-            "id": "6Wbvbzln8S0MTEBNPy9hmF",
-            "images": [
-                
-            ],
-            "name": "New Playlist2022",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "Miw2MzAzN2EyMzcyYzA5MWRlMWYwMWJjYzFlNTdkM2FiOTMwMGIwNjI5",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/6Wbvbzln8S0MTEBNPy9hmF/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:6Wbvbzln8S0MTEBNPy9hmF"
-        },
-        {
-            "collaborative": false,
-            "description": "New playlist description",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/2xZjUqeAVpobZTqvbgVmBk"
-            },
-            "href": "https://api.spotify.com/v1/playlists/2xZjUqeAVpobZTqvbgVmBk",
-            "id": "2xZjUqeAVpobZTqvbgVmBk",
-            "images": [
-                
-            ],
-            "name": "New Playlist",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "Miw5YzUxMjk2NzQ2ODQyZGVlODM0MWEwNDZiZTVkYzM2ZGYyNDJhMDIz",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/2xZjUqeAVpobZTqvbgVmBk/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:2xZjUqeAVpobZTqvbgVmBk"
-        },
-        {
-            "collaborative": false,
-            "description": "New playlist description",
-            "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/1TaZcp3uwzzZ0zU5pdq0Zp"
-            },
-            "href": "https://api.spotify.com/v1/playlists/1TaZcp3uwzzZ0zU5pdq0Zp",
-            "id": "1TaZcp3uwzzZ0zU5pdq0Zp",
-            "images": [
-                
-            ],
-            "name": "New Playlist1996",
-            "owner": {
-                "display_name": "Koda@1996",
-                "external_urls": {
-                    "spotify": "https://open.spotify.com/user/313ezwhpfwgm7kspa45ceyqhgtu4"
-                },
-                "href": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4",
-                "id": "313ezwhpfwgm7kspa45ceyqhgtu4",
-                "type": "user",
-                "uri": "spotify:user:313ezwhpfwgm7kspa45ceyqhgtu4"
-            },
-            "primary_color": null,
-            "public": false,
-            "snapshot_id": "MixlMGYyNmU3ZDZhNGZhNzkwNmNmZGVjMjVjOGEwOWI0MDQ4YTU1MjZi",
-            "tracks": {
-                "href": "https://api.spotify.com/v1/playlists/1TaZcp3uwzzZ0zU5pdq0Zp/tracks",
-                "total": 0
-            },
-            "type": "playlist",
-            "uri": "spotify:playlist:1TaZcp3uwzzZ0zU5pdq0Zp"
         }
     ],
     "limit": 20,
     "next": "https://api.spotify.com/v1/users/313ezwhpfwgm7kspa45ceyqhgtu4/playlists?offset=20&limit=20",
     "offset": 0,
     "previous": null,
-    "total": 21
+    "total": 30
+}
+First playlist ID: 1Yh4R3U45d34G16C2o3H6p
+Owner name: Koda@1996
+--------------------Update Playlist--------------------
+{
+    "error": {
+        "status": 400,
+        "message": "Given positions are out of bounds"
+    }
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
