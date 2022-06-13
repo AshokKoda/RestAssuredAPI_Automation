@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 
 public class RestAssured_API_Automation {
     String token;
-    static String userId, playlistId;
+    static String userId, playlistId, trackId;
 
     @BeforeTest
     public void getToken(){
-        token = "Bearer BQChEO6do5jLhiHEYuPGt4rnvrjZ7_v1U4GQ3yX4P8sQouSRxshBXYvP0yNZM6kOlpSfXrU7OLE8l2sx-StZHFhZfl4OzJxC4Z0JuQdFM4EEpBC5JZfQr65OlV6aCxMsViP5ZTe7s3QoJfv2QKZmdab179oTzCTnV0lpclSCwQcBpyesb-7yRheEiDIs7fNTmpy3TCEEwKxvhlAyPJfWudfHAVyeB5VWZPptDXcpUikVSxlpl4Urg9AXlmezOWQclFH-y7jda4VyHGZyHF116Ro";
+        token = "Bearer BQAunUEUxdj0iLqCnpQBxVFWZdnnFhkGzEfyVoPm-5ngEHQySiVVHzp37jgncti0ladidIjv4xL9bxrPTHUJjNQNZ70b9FpJx-WPw9X-D_JqJH7H1_n3v1k3BjR5uBq80WU-EoYf3YQ8yHUEEqKSSqMNDTOXrgAmZe-MhtiR0sZHxzlMcZYlqEGuRJ50o5cu9VLycBLTUo8ICJ8T6HDhS4P4z8LdLOWQZBA8ApIGcbUHcqPxanxLn0nppYkUh_oaBm5XHqbBUHueDmUleCuAjXa3mbdS2N9E0qPVPZYzs6GBD9Si";
     }
 
     @Test(priority = 0)
@@ -110,7 +110,7 @@ public class RestAssured_API_Automation {
                 .header("Authorization",token)
                 .body(requestBody)
                 .when()
-                .put("https://api.spotify.com/v1/playlists/209i7U7zf66jjO595mkqhD/tracks");
+                .put("https://api.spotify.com/v1/playlists/"+playlistId+"/tracks");
         response.prettyPrint();
     }
 
@@ -122,7 +122,63 @@ public class RestAssured_API_Automation {
                 .header("ContentType", "application/json")
                 .header("Authorization",token)
                 .when()
-                .delete("https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p/tracks");
+                .delete("https://api.spotify.com/v1/playlists/"+playlistId+"/tracks");
         response.prettyPrint();
+    }
+
+    @Test
+    public void searchItem(){
+        System.out.println("--------------------Search item--------------------");
+        Response response = RestAssured.given()
+                .header("Accept", "application/json")
+                .header("ContentType", "application/json")
+                .header("Authorization",token)
+                .when()
+                .get("https://api.spotify.com/v1/search?q=track&type=track");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void getAvailableMarkets(){
+        System.out.println("--------------------get Available Markets--------------------");
+        Response response = RestAssured.given()
+                .header("Accept", "application/json")
+                .header("ContentType", "application/json")
+                .header("Authorization",token)
+                .when()
+                .get("https://api.spotify.com/v1/markets");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(200);
+    }
+
+    @Test
+    public void addItemsToPlaylist(){
+        System.out.println("--------------------add Items To Playlist--------------------");
+        Response response = RestAssured.given()
+                .header("Accept", "application/json")
+                .header("ContentType", "application/json")
+                .header("Authorization",token)
+                .pathParam("position", "1")
+                .pathParam("uris", "spotify:track:6FQQiTpYnfc5803p84bQp1")
+                .when()
+                .put("https://api.spotify.com/v1/playlists/1Yh4R3U45d34G16C2o3H6p/tracks?position={position}&uris={uris}");
+        response.prettyPrint();
+        response.then().assertThat().statusCode(201);
+    }
+
+    @Test
+    public void getTracks(){
+        System.out.println("--------------------get tracks--------------------");
+        Response response = RestAssured.given()
+                .header("Accept", "application/json")
+                .header("ContentType", "application/json")
+                .header("Authorization",token)
+                .when()
+                .get("https://api.spotify.com/v1/tracks/6FQQiTpYnfc5803p84bQp1");
+        response.prettyPrint();
+        trackId = response.path("id");
+        System.out.println("Track ID: " + trackId);
+        response.then().assertThat().statusCode(200);
     }
 }
