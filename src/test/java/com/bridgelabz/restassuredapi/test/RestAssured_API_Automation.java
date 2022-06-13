@@ -13,7 +13,7 @@ public class RestAssured_API_Automation {
 
     @BeforeTest
     public void getToken(){
-        token = "Bearer BQCCRxmI52fth7LDWn2ha08v3JUkP_A-5MGUFwVdwKqTaG1GbzhEHvTmMAGpFtu2uyp7bg4aAcPloc_FUm4J6X7qeZh79dD6jK4hWkRP4Wm5kRfQWjkfmD7B-9woVuTlQxqE4QXPBRkkdpPokJremfKTNFHGKtPhvBvnsHziDWfpOsUeS29FgaDTskB9XTl-GmRYNn6h6dA8HLsdNEqYnneymqYo3PTeKaeNxOOXsQ4RmqLrXk6QbwF9hpyeGmxL8rN9qRy3j0OyaZ3MbJ4UX69usCNlwp6KpBKZIKST";
+        token = "Bearer BQChEO6do5jLhiHEYuPGt4rnvrjZ7_v1U4GQ3yX4P8sQouSRxshBXYvP0yNZM6kOlpSfXrU7OLE8l2sx-StZHFhZfl4OzJxC4Z0JuQdFM4EEpBC5JZfQr65OlV6aCxMsViP5ZTe7s3QoJfv2QKZmdab179oTzCTnV0lpclSCwQcBpyesb-7yRheEiDIs7fNTmpy3TCEEwKxvhlAyPJfWudfHAVyeB5VWZPptDXcpUikVSxlpl4Urg9AXlmezOWQclFH-y7jda4VyHGZyHF116Ro";
     }
 
     @Test(priority = 0)

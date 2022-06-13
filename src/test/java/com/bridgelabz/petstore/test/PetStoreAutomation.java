@@ -1,4 +1,4 @@
-package com.bridgelabz.petstore;
+package com.bridgelabz.petstore.test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
