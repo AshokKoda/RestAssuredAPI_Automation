@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.petstore.test.PetStoreAutomation" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-14T10:28:09" hostname="DESKTOP-FTC32SQ" time="3.433">
+  <properties/>
+  <testcase name="getUserByUsername" classname="com.bridgelabz.petstore.test.PetStoreAutomation" time="3.433"/>
+  <system-out><![CDATA[-----------------Get User By Username-----------------
+{
+    "id": 999889899400,
+    "username": "ashok2022",
+    "firstName": "Koda",
+    "lastName": "Ashok",
+    "email": "ashok@gmail.com",
+    "password": "0000",
+    "phone": "1234567890",
+    "userStatus": 0
+}
+Username : ashok2022
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

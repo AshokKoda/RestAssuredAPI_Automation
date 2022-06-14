@@ -13,7 +13,7 @@ public class RestAssured_API_Automation {
 
     @BeforeTest
     public void getToken(){
-        token = "Bearer BQAunUEUxdj0iLqCnpQBxVFWZdnnFhkGzEfyVoPm-5ngEHQySiVVHzp37jgncti0ladidIjv4xL9bxrPTHUJjNQNZ70b9FpJx-WPw9X-D_JqJH7H1_n3v1k3BjR5uBq80WU-EoYf3YQ8yHUEEqKSSqMNDTOXrgAmZe-MhtiR0sZHxzlMcZYlqEGuRJ50o5cu9VLycBLTUo8ICJ8T6HDhS4P4z8LdLOWQZBA8ApIGcbUHcqPxanxLn0nppYkUh_oaBm5XHqbBUHueDmUleCuAjXa3mbdS2N9E0qPVPZYzs6GBD9Si";
+        token = "Bearer BQDo6kwea5BYksxxw4F7M6RIRLmvyXdSGsIz3jWoddOFaHuOQl4N0HO5cTdUhRK_ftlqrIu-7HZaRCZ6bbUlAA9Bm57JCC1cLx71pRLCl2RTVuxj8bvGaynNnS3V4gdWucuV8ZDt16ZOzOPpFZZa2RSWIVUfK_h11d2iS2udURjwGCSwig7BYUgjkn20u_yGhhUqsgCVw4gqemwd5-CrnBoNcTDhStprnO8pij-MUfyXMpSpJXUNr1LAmP7ZjbZvi6XbTtVu72hZN8t7ur__s8w";
     }
 
     @Test(priority = 0)
@@ -133,8 +133,10 @@ public class RestAssured_API_Automation {
                 .header("Accept", "application/json")
                 .header("ContentType", "application/json")
                 .header("Authorization",token)
+                .pathParam("q", "RRR")
+                .pathParam("type", "track")
                 .when()
-                .get("https://api.spotify.com/v1/search?q=track&type=track");
+                .get("https://api.spotify.com/v1/search?q={q}&type={type}");
         response.prettyPrint();
         response.then().assertThat().statusCode(200);
     }
